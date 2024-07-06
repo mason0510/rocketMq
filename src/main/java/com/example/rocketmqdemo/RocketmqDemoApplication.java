@@ -2,6 +2,7 @@ package com.example.rocketmqdemo;
 
 import com.example.rocketmqdemo.service.MySink;
 import com.example.rocketmqdemo.service.MySource;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.stream.annotation.EnableBinding;
@@ -13,7 +14,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.example.rocketmqdemo.service"})
-@EnableBinding({MySink.class,MySource.class})
+@MapperScan("com.example.rocketmqdemo.mapper")
+@EnableBinding({Sink.class,Source.class,MySink.class,MySource.class})
 public class RocketmqDemoApplication {
 
 	public static void main(String[] args) {

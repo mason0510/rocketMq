@@ -44,6 +44,8 @@ spring:
             tags: tagStr
             concurrency: 20
 
+  functional:
+  enabled: true
 server:
   port: 8888
 

@@ -14,3 +14,6 @@ Caused by: org.springframework.integration.MessageDispatchingException: Dispatch
 4.
 RocketMQ Message hasn‘t been sent. Caused by No route info of this topic
 名称应该是 consumequeue ，这个文件夹存放消费者订阅的队列信息，所以才会报错说找不到Topic的路由信息
+
+5.找不到bean
+4.9rocketmq版本对应2.6版本springboot.
