@@ -13,7 +13,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.example.rocketmqdemo.service"})
+@ComponentScan(basePackages = {
+		"com.example.rocketmqdemo.service",
+		"com.example.rocketmqdemo.controller"  // 添加这行来包含控制器
+})
 @MapperScan("com.example.rocketmqdemo.mapper")
 @EnableBinding({Sink.class,Source.class,MySink.class,MySource.class})
 public class RocketmqDemoApplication {
